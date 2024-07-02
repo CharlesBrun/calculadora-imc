@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h2>Cálculo IMC</h2>
+    <p id="alerta" style="display: none; color: red;">Por favor, preencha todos os campos.</p>
+    <form id="imc-form" novalidate>
+        <label for="altura">Altura:</label>
+        <input type="number" id="altura" name="altura" step="0.01" required>
+        <select id="unidade-altura">
+            <option value="m">Metros (m)</option>
+            <option value="cm">Centímetros (cm)</option>
+        </select>
+        <br><br>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" required><br><br>
+        <label for="IMC">IMC:</label>
+        <input type="number" id="resultado" name="resultado" step="0.1" disabled><br><br>
+        <button type="button" id="submit">Calcular IMC</button>
+
+        <div id="classificacao" style="margin-top: 10px;"></div>
+    </form>
+</body>
+</html>
